@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Audio Bound</string>
+    <string name="msg" >This application is created to show time and play audio,using bond  service</string>
+    <string name="get_time">Get Time</string>
+    <string name="play">Play</string>
+    <string name="stop">Stop</string>
+</resources>
