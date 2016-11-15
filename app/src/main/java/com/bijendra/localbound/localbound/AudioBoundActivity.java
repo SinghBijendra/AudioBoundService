@@ -35,13 +35,37 @@ public class AudioBoundActivity extends AppCompatActivity {
             }
         };
 
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         bindService(new Intent(this,AudioBoundService.class),serviceConnection,BIND_AUTO_CREATE);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        unbindService(serviceConnection);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unbindService(serviceConnection);
+
     }
 
     public void gotoAction(View view)
